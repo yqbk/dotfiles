@@ -10,6 +10,7 @@
   - `p10k` config
 
 ## Last update
+
 **31.10.2020**
 
 

@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/jakubsyrek/svlex/apps/frontend'
+let g:netrw_dirhist_4='/Users/jakubsyrek/svlex/apps/frontend/node_modules/@finams/ui-kit/src'
+let g:netrw_dirhist_3='/Users/jakubsyrek/svlex/apps/frontend/node_modules/@finams/ui-kit'
+let g:netrw_dirhist_2='/Users/jakubsyrek/svlex/.git/hooks'
+let g:netrw_dirhist_1='/Users/jakubsyrek/svlex'
+let g:netrw_dirhist_0='/Users/jakubsyrek/secmarket-landing'
+let g:netrw_dirhist_9='/Users/jakubsyrek/secmarket-landing/.git'
+let g:netrw_dirhist_8='/Users/jakubsyrek/secmarket/blog/src/components/Hero'
+let g:netrw_dirhist_7='/Users/jakubsyrek/secmarket/blog/src/components'
+let g:netrw_dirhist_6='/Users/jakubsyrek/secmarket/blog/src'

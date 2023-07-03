@@ -9,7 +9,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git docker docker-compose zsh-nvm)
+plugins=(git docker docker-compose zsh-nvm zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,3 +41,7 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+
+## Export variables
+export PATH="$PATH:`yarn global bin`"

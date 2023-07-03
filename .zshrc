@@ -9,7 +9,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git)
+plugins=(git docker docker-compose zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 

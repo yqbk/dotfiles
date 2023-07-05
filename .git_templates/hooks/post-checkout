@@ -1,0 +1,12 @@
+#!/bin/sh
+
+prev_HEAD="$1"
+new_HEAD="$2"
+new_branch="$3"
+
+if [ "$new_branch" = 1 ]; then
+    echo "Trying to pull after checkout! [TEST]"
+    git pull origin "$new_HEAD"
+fi
+
+exit 0

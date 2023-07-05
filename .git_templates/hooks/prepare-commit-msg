@@ -1,0 +1,41 @@
+#!/bin/sh
+# husky
+
+# Created by Husky v4.3.8 (https://github.com/typicode/husky#readme)
+#   At: 02/01/2023, 10:58:33
+#   From: /Users/yqbk/code/fundingport-fe/node_modules/husky (undefined)
+#
+
+
+echo "\n\nprecommit message start"
+
+echo "GIT_WORK_TREE: ${GIT_WORK_TREE}"
+
+if [ -z "$BRANCHES_TO_SKIP" ]; then
+  BRANCHES_TO_SKIP=(master develop dev)
+fi
+
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+BRANCH_NAME="${BRANCH_NAME#*/}"
+BRANCH_EXCLUDED=$(printf "%s\n" "${BRANCHES_TO_SKIP[@]}" | grep -c "^$BRANCH_NAME$")
+BRANCH_JIRA_KEY=$(echo $BRANCH_NAME | grep -E -o '^([A-Z]+-[0-9]+)')
+
+if ! [[ $BRANCH_EXCLUDED -eq 1 ]] && ! [[ $(cat "$1") == "$BRANCH_JIRA_KEY"* ]] && ! [ -z "$BRANCH_JIRA_KEY" ]; then
+  echo "$BRANCH_JIRA_KEY: $(cat "${1}")" > "$1"
+fi
+
+echo "Current working directory: $(pwd)"
+
+
+
+FILE=.git/hooks/husky.sh
+if [ -f "$FILE" ]; then
+    echo "$FILE exists."
+    . ".git/hooks/husky.sh"
+else 
+    echo "$FILE does not exist."
+fi
+
+
+echo "precommit message end\n\n\n"
+

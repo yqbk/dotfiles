@@ -5,7 +5,7 @@ new_HEAD="$2"
 new_branch="$3"
 
 if [ "$new_branch" = 1 ]; then
-    echo "Trying to pull after checkout! [TEST]"
+    echo "\n\n\nTrying to pull after checkout!"
     git pull origin "$new_HEAD"
 fi
 

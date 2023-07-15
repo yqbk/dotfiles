@@ -44,4 +44,4 @@ load-nvmrc
 
 
 ## Export variables
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:$HOME/scripts
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:$HOME/scripts:/Users/yqbk/.nvm/versions/node/$(nvm version)/bin
